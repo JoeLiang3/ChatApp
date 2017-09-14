@@ -1,5 +1,5 @@
 var expect = require('expect');
-var {generateMessage} = require("./message.js");
+var {generateMessage, generateLocationMessage} = require("./message.js");
 
 describe('generateMessage', () => {
   it('should generate correct message object', () => {
@@ -10,3 +10,11 @@ describe('generateMessage', () => {
 
   });
 });
+
+describe('generateLocationMessage', () => {
+  it('should generate correct location', () => {
+    var res = generateLocationMessage('Joe', 3, 3);
+    expect(res.from).toBe("Joe");
+    expect(res.url).toBe("https://www.google.com/maps?q=3,3");
+  })
+})

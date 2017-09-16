@@ -1,0 +1,9 @@
+.chat__sidebar{
+  position: relative
+}
+
+#exit {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

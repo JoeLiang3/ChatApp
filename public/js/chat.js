@@ -80,6 +80,11 @@ jQuery('#message-form').on('submit', function (e) {
   });
 });
 
+var exitButton = jQuery('#exit');
+exitButton.on('click', function() {
+  window.location.href = '/';
+});
+
 var locationButton = jQuery('#send-location');
 locationButton.on('click', function () {
   if (!navigator.geolocation) {
